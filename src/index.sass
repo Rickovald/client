@@ -1,0 +1,26 @@
+@import "./presets/variables"
+
+body
+  margin: 0
+  padding: 0
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  @include Font
+
+img
+  pointer-events: none
+  user-select: none
+
+button
+  user-select: none
+
+input, button
+  height: 30px
+  border-radius: 5px
+  outline: none
+  border: none
+  &:active, &:focus
+    outline: none
+    border: none
