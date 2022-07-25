@@ -1,9 +1,12 @@
+import { NavLink } from 'react-router-dom'
 import s from './navigation.module.sass'
 
 const Navigation = () => {
   return (
     <div className={s.root}>
-      Navigation
+      <NavLink to='/'>Main</NavLink>
+      <NavLink to='/about'>About</NavLink>
+      <NavLink to='/contacts'>Contacts</NavLink>
     </div>
   )
 }

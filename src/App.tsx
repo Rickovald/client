@@ -3,6 +3,8 @@ import Main from './Main/Main'
 import Footer from './Footer/Footer'
 import Navigation from './Navigation/Navigation'
 import Error404 from './Error404/Error404'
+import About from './About/About'
+import Contacts from './Contacts/Contacts'
 
 const App = () => {
   return (
@@ -14,6 +16,16 @@ const App = () => {
           path='/'
           // caseSensitive={false}
           element={<Main />}
+        />
+        <Route
+          path='/about'
+          // caseSensitive={false}
+          element={<About />}
+        />
+        <Route
+          path='/contacts'
+          // caseSensitive={false}
+          element={<Contacts />}
         />
         {
         /* <Route
