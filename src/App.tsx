@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
+
 import Main from './Main/Main'
 import Footer from './Footer/Footer'
 import Navigation from './Navigation/Navigation'
@@ -9,25 +11,30 @@ import Contacts from './Contacts/Contacts'
 const App = () => {
   return (
     <div className='App'>
-     <Router>
-      <Navigation />
-      <Routes>
-        <Route
-          path='/'
-          // caseSensitive={false}
-          element={<Main />}
-        />
-        <Route
-          path='/about'
-          // caseSensitive={false}
-          element={<About />}
-        />
-        <Route
-          path='/contacts'
-          // caseSensitive={false}
-          element={<Contacts />}
-        />
-        {
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Page title</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
+      <Router>
+        <Navigation />
+        <Routes>
+          <Route
+            path='/'
+            // caseSensitive={false}
+            element={<Main />}
+          />
+          <Route
+            path='/about'
+            // caseSensitive={false}
+            element={<About />}
+          />
+          <Route
+            path='/contacts'
+            // caseSensitive={false}
+            element={<Contacts />}
+          />
+          {
         /* <Route
           path='/concerts'
           // caseSensitive={false}
@@ -49,10 +56,10 @@ const App = () => {
           element={<Admin />}
         />
         */}
-        <Route path='*' element={<Error404 />} />
-      </Routes>
-      <Footer />
-    </Router>
+          <Route path='*' element={<Error404 />} />
+        </Routes>
+        <Footer />
+      </Router>
     </div>
   )
 }
