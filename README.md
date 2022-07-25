@@ -90,19 +90,19 @@ const Card = ({active}) => {
 # Запуск
 Проект запускется идентично любому проекту созданному с помощью Create React App
 
-Troubleshooting
+# Troubleshooting
 пункт в разработке
-Release Notes
+# Release Notes
 пункт в разработке
-Contributing
+# Contributing
 пункт в разработке
-Code of Conduct
+# Code of Conduct
 пункт в разработке
-RELEASE_NOTES
+# RELEASE_NOTES
 пункт в разработке
-CONTRIBUTING
+# CONTRIBUTING
 пункт в разработке
-CODE_OF_CONDUCT
+# CODE_OF_CONDUCT
 пункт в разработке
-Pull Request template
+# Pull Request template
 пункт в разработке
