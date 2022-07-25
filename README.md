@@ -1,46 +1,109 @@
-# Getting Started with Create React App
+# Описание
+Это небольшой шаблон для написания react приложений на typescript.
+Шаблон включает в себя:
++ Конфигурированный eslint
++ Подключенные шрифты и пресеты для sass
++ Основную структуру верстки и несколько заранее заготовленных страниц
++	библиотеки для создания запросов и хранения данных, для создания слайдеров, для маршрутизации и для создания анимаций
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Стилизация кода 
 
-## Available Scripts
+## JavaScript
+Все файлы javascript обязаны заканчиваться на *.js*
 
-In the project directory, you can run:
+### Компоненты
+Мы больше **не используем классовые** компоненты в коде. Всё **пишем** через **функциональные**.
 
-### `npm start`
+```
+const Component = (props) => {
+    const { width } = useGetDimensions()
+    const [help, setHelp] = useState(false)
+    ...
+}
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Функции
+В коде используем *стрелочные* функции. **Не объявляем** их через ключевое слово `function`, только через `const`. Принимаемые значения ставим в скобки **всегда**
+```
+const function = (props) => {
+    ...
+}
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## SASS
+В проекте используем исключительно *SASS* никаких *CSS* или *SCSS*
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Правила написания *SASS*
+Используется видоизмененная методология BEM и модульный SASS. Правила BEM похожи на обычные, но благодаря модульному SASS можно не вписывать имена всех родительских блоков, а писать просто класс для компонента, модульный SASS подставит класс главного родительского блока автоматически и создаст поле видимости только для конкретного компонента `_`. Модификаторы для классов пишутся через знак Если все же нужно прописать некоторому дочернему блоку имя от родителя то пишем имя через знак `__`. Все вложенные элементы пишем через `&` 
+Пример SASS:
+```
+.card
+    width: 100%
+		// Дочерний блок
+    &__name
+        width: 50px
+        height: 100p
+		// Модификатор
+    &_active
+        width...
+```
+Пример JS:
+```
+import s from './main.module.sass'
 
-### `npm run build`
+const Card = ({active}) => {
+  return (
+    <div 
+			className={
+				// пример использования модификатора
+				active 
+				? `${s.card} ${s.card_active}`
+				: s.card
+			}
+		>
+			{/* Дочерний блок */}
+      <div className={s.card__name}>Name</div>
+			content
+    </div>
+  )
+}
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### @import
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+В SASS все цвета находятся в файле `variables.sass` используем цвета *исключительно* от туда. Если нужного цвета почему то нет, то связываемся и добавлям его. Функции находятся там же.   
+Пример импорта:
+```scss
+@import "../../varibles/varibles"
+@import "../../varibles/functions"
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Адаптив
 
-### `npm run eject`
+Для *адаптива страницы* используем функцию `calcSize` она описана в файле функций.
+**Медиа запросы пишем в конце *SASS* файла**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Создание папок и подпапок
+Воизбежание различных багов названия папок и подпапок пишется исключительно через **camelCase**. Пример:
+`SomedayAllTheseRulesOfTheCodeWillReallyHelpUsButForNowThereIsThatIs`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Запуск
+Проект запускется идентично любому проекту созданному с помощью Create React App
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Troubleshooting
+пункт в разработке
+Release Notes
+пункт в разработке
+Contributing
+пункт в разработке
+Code of Conduct
+пункт в разработке
+RELEASE_NOTES
+пункт в разработке
+CONTRIBUTING
+пункт в разработке
+CODE_OF_CONDUCT
+пункт в разработке
+Pull Request template
+пункт в разработке
