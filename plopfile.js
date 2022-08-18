@@ -17,7 +17,7 @@ module.exports = function (plop) {
             {
                 type: 'add',
                 path: 'src/{{properCase title}}/{{camelCase title}}.module.sass',
-                templateFile: '_templates/styleSass.hbs'
+                templateFile: '_templates/styleSassPage.hbs'
             },
             {
                 type: 'append',
@@ -57,7 +57,7 @@ module.exports = function (plop) {
             {
                 type: 'add',
                 path: 'src/components/{{properCase title}}/{{camelCase title}}.module.sass',
-                templateFile: '_templates/styleSass.hbs'
+                templateFile: '_templates/styleSassComponent.hbs'
             }
         ]
     });
