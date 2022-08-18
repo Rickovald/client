@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
+// COMPONENT IMPORTS
 import Main from './Main/Main'
 import Footer from './Footer/Footer'
 import Navigation from './Navigation/Navigation'
@@ -23,6 +24,7 @@ const App = () => {
             path='/'
             element={<Main />}
           />
+          {/* COMPONENT ROUTES */}
           <Route
             path='/about'
             element={<About />}

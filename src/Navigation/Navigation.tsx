@@ -12,6 +12,7 @@ const Navigation = () => {
           <NavLink className={s.link} to='/'>Main</NavLink>
           <NavLink className={s.link} to='/about'>About</NavLink>
           <NavLink className={s.link} to='/contacts'>Contacts</NavLink>
+          {/* COMPONENT LINKS */}
         </div>
       </div>
     </div>
