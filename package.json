@@ -31,7 +31,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "plop": "plop"
+    "plop": "plop",
+    "plop:component": "plop component",
+    "plop:page": "plop page"
   },
   "eslintConfig": {
     "extends": [
