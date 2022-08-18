@@ -1,11 +1,11 @@
-import s from './about.module.sass'
+import s from './about.module.sass';
 
 const About = () => {
-  return (
-    <div className={s.root}>
+    return (
+        <div className={s.root}>
       About
-    </div>
-  )
-}
+        </div>
+    );
+};
 
-export default About
+export default About;

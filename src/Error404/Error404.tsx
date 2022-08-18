@@ -1,11 +1,11 @@
-import s from './error404.module.sass'
+import s from './error404.module.sass';
 
 const Error404 = () => {
-  return (
-    <div className={s.root}>
+    return (
+        <div className={s.root}>
       Error404
-    </div>
-  )
-}
+        </div>
+    );
+};
 
-export default Error404
+export default Error404;

@@ -1,11 +1,11 @@
-import s from './main.module.sass'
+import s from './main.module.sass';
 
 const Main = () => {
-  return (
-    <div className={s.root}>
+    return (
+        <div className={s.root}>
       Main
-    </div>
-  )
-}
+        </div>
+    );
+};
 
-export default Main
+export default Main;

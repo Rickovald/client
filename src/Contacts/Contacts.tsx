@@ -1,11 +1,11 @@
-import s from './contacts.module.sass'
+import s from './contacts.module.sass';
 
 const Contacts = () => {
-  return (
-    <div className={s.root}>
+    return (
+        <div className={s.root}>
       Contacts
-    </div>
-  )
-}
+        </div>
+    );
+};
 
-export default Contacts
+export default Contacts;

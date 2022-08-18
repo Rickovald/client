@@ -22,7 +22,9 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "indent": ["error", 4],
         "eol-last": ["error", "never"],
-        "no-console": "off"
+        "no-console": "off",
+        "semi": ["error", "always"]
     }
 }
