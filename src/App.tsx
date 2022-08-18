@@ -21,41 +21,16 @@ const App = () => {
         <Routes>
           <Route
             path='/'
-            // caseSensitive={false}
             element={<Main />}
           />
           <Route
             path='/about'
-            // caseSensitive={false}
             element={<About />}
           />
           <Route
             path='/contacts'
-            // caseSensitive={false}
             element={<Contacts />}
           />
-          {
-        /* <Route
-          path='/concerts'
-          // caseSensitive={false}
-          element={<Concerts />}
-        />
-        <Route
-          path='/albums'
-          // caseSensitive={false}
-          element={<Albums />}
-        />
-        <Route
-          path='/album/:id'
-          // caseSensitive={false}
-          element={<Album />}
-        />
-        <Route
-          path='/admin'
-          // caseSensitive={false}
-          element={<Admin />}
-        />
-        */}
           <Route path='*' element={<Error404 />} />
         </Routes>
         <Footer />
