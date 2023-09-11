@@ -1,7 +1,7 @@
 import s from './footer.module.sass';
-import tt from '../media/social/TikTok_white.svg';
-import vk from '../media/social/VK_white.svg';
-import inst from '../media/social/Instagram_white.svg';
+import tt from 'media/social/TikTok_white.svg';
+import vk from 'media/social/VK_white.svg';
+import inst from 'media/social/Instagram_white.svg';
 
 const Footer = () => {
     return (

@@ -2,12 +2,12 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 // COMPONENT IMPORTS
-import Main from './Pages/Main/Main';
-import Footer from './Components/Footer/Footer';
-import Navigation from './Components/Navigation/Navigation';
-import Error404 from './Pages/Error404/Error404';
-import About from './Pages/About/About';
-import Contacts from './Pages/Contacts/Contacts';
+import Main from 'pages/Main/Main';
+import Footer from 'components/Footer/Footer';
+import Navigation from 'components/Navigation/Navigation';
+import Error404 from './pages/Error404/Error404';
+import About from './pages/About/About';
+import Contacts from './pages/Contacts/Contacts';
 
 const App = () => {
     return (
@@ -24,7 +24,6 @@ const App = () => {
                         path='/'
                         element={<Main />}
                     />
-                    {/* COMPONENT ROUTES */}
                     <Route
                         path='/about'
                         element={<About />}
@@ -33,6 +32,7 @@ const App = () => {
                         path='/contacts'
                         element={<Contacts />}
                     />
+                    {/* COMPONENT ROUTES */}
                     <Route path='*' element={<Error404 />} />
                 </Routes>
                 <Footer />
