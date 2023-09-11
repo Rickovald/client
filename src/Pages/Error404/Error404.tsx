@@ -1,11 +1,10 @@
+import { FC, ReactElement } from 'react';
 import s from './error404.module.sass';
 
-const Error404 = () => {
+export const Error404: FC = (): ReactElement => {
     return (
         <div className={s.root}>
       Error404
         </div>
     );
 };
-
-export default Error404;

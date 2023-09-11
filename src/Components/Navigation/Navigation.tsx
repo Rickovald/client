@@ -1,7 +1,8 @@
+import { FC, ReactElement } from 'react';
 import { NavLink } from 'react-router-dom';
 import s from './navigation.module.sass';
 
-const Navigation = () => {
+export const Navigation: FC = (): ReactElement => {
     return (
         <div className={s.root}>
             <div className={s.wrapper}>
@@ -16,5 +17,3 @@ const Navigation = () => {
         </div>
     );
 };
-
-export default Navigation;

@@ -1,12 +1,13 @@
+import { FC, ReactElement } from 'react';
 import s from './footer.module.sass';
 import tt from 'media/social/TikTok_white.svg';
 import vk from 'media/social/VK_white.svg';
 import inst from 'media/social/Instagram_white.svg';
 
-const Footer = () => {
+export const Footer: FC = (): ReactElement => {
     return (
         <div className={s.root}>
-      © 2022 All rights reserved
+            © 2022 All rights reserved
             <div className={s.social}>
                 <a
                     className={s.href}
@@ -36,5 +37,3 @@ const Footer = () => {
         </div>
     );
 };
-
-export default Footer;
