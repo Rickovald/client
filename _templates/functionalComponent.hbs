@@ -1,16 +1,14 @@
-import { FC } from 'react';
+import { FC, ReactElement } from 'react';
 import s from './{{camelCase title}}.module.sass';
 
 interface I{{properCase title}} {
 
 };
 
-const {{properCase title}}: FC<I{{properCase title}}> = () => {
+export const {{properCase title}}: FC<I{{properCase title}}> = (): ReactElement => {
     return (
         <div className = { s.{{camelCase title}} }>
 
         </div>
     );
 };
-
-export default {{properCase title}};

@@ -11,12 +11,17 @@ module.exports = function (plop) {
         actions: [
             {
                 type: 'add',
-                path: 'src/{{properCase title}}/{{properCase title}}.tsx',
+                path: 'src/pages/{{properCase title}}/{{properCase title}}.tsx',
                 templateFile: '_templates/functionalComponent.hbs'
             },
             {
                 type: 'add',
-                path: 'src/{{properCase title}}/{{camelCase title}}.module.sass',
+                path: 'src/pages/{{properCase title}}/index.ts',
+                templateFile: '_templates/indexComponent.hbs'
+            },
+            {
+                type: 'add',
+                path: 'src/pages/{{properCase title}}/{{camelCase title}}.module.sass',
                 templateFile: '_templates/styleSassPage.hbs'
             },
             {
@@ -29,13 +34,13 @@ module.exports = function (plop) {
                 type: 'append',
                 path: 'src/App.tsx',
                 pattern: /\{\/\* COMPONENT ROUTES \*\/\}$/gm,
-                template: '          <Route path=\'/{{snakeCase title}}\' element={<{{properCase title}} />}/>'
+                template: '                        <Route path=\'/{{snakeCase title}}\' element={<{{properCase title}} />}/>'
             },
             {
                 type: 'append',
-                path: 'src/Navigation/Navigation.tsx',
+                path: 'src/Components/Navigation/Navigation.tsx',
                 pattern: /\{\/\* COMPONENT LINKS \*\/\}$/gm,
-                template: '          <NavLink className={s.link} to=\'{{snakeCase title}}\'>{{properCase title}}</NavLink>'
+                template: '                    <NavLink className={s.link} to=\'{{snakeCase title}}\'>{{camelCase title}}</NavLink>'
             }
         ]
     });
@@ -53,6 +58,11 @@ module.exports = function (plop) {
                 type: 'add',
                 path: 'src/components/{{properCase title}}/{{properCase title}}.tsx',
                 templateFile: '_templates/functionalComponent.hbs'
+            },
+            {
+                type: 'add',
+                path: 'src/components/{{properCase title}}/index.ts',
+                templateFile: '_templates/indexComponent.hbs'
             },
             {
                 type: 'add',
